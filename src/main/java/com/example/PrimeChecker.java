@@ -14,3 +14,4 @@ public class PrimeChecker {
         return PRIME_NUMBERS.contains(number);
     }
 }
+// red > run > blue/green edit > run > refactor > repeat
