@@ -2,34 +2,40 @@ package com.example;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.api.Test;
 
 public class FizzBuzzTest {
 
     private final FizzBuzz FizzBuzz = new FizzBuzz();
-
-    @ParameterizedTest
-    @ValueSource(ints = {1, 2})
-    public void testNumbersReturnThemselves(int number) {
-        assertEquals(String.valueOf(number), FizzBuzz.fizzBuzz(number));
+    
+    @Test
+    public void test1Returns1() {
+        assertEquals("1", FizzBuzz.fizzBuzz(1));
     }
 
-    @ParameterizedTest
-    @ValueSource(ints = {3})
-    public void testMultiplesOf3ReturnFizz(int number) {
-        assertEquals("Fizz", FizzBuzz.fizzBuzz(number));
+    @Test
+    public void test2Returns2() {
+        assertEquals("2", FizzBuzz.fizzBuzz(2));
     }
 
-    @ParameterizedTest
-    @ValueSource(ints = {5})
-    public void testMultiplesOf5ReturnBuzz(int number) {
-        assertEquals("Buzz", FizzBuzz.fizzBuzz(number));
+    @Test
+    public void test3ReturnsFizz() {
+        assertEquals("Fizz", FizzBuzz.fizzBuzz(3));
     }
 
-    @ParameterizedTest
-    @ValueSource(ints = {15, 30})
-    public void testMultiplesOf3And5ReturnFizzBuzz(int number) {
-        assertEquals("FizzBuzz", FizzBuzz.fizzBuzz(number));
+    @Test
+    public void test5ReturnsBuzz() {
+        assertEquals("Buzz", FizzBuzz.fizzBuzz(5));
+    }
+
+    @Test
+    public void test15ReturnsFizzBuzz() {
+        assertEquals("FizzBuzz", FizzBuzz.fizzBuzz(15));
+    }
+
+    @Test
+    public void test30ReturnsFizzBuzz() {
+        assertEquals("FizzBuzz", FizzBuzz.fizzBuzz(30));
+
     }
 }
