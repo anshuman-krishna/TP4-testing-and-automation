@@ -10,7 +10,7 @@ public class PrimeChecker {
     );
 
     public boolean isPrime(int number) {
-
+        if(number > 100) throw new IllegalArgumentException("Numbers above 100 are not accepted");
         return PRIME_NUMBERS.contains(number);
     }
 }
