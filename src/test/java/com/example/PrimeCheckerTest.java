@@ -2,6 +2,7 @@ package com.example;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -512,5 +513,9 @@ public class PrimeCheckerTest {
     @Test
     public void test100IsNotPrime() {
         assertFalse(primeChecker.isPrime(100), "100 should not be considered a prime number");
+    }
+    @Test
+    public void testNumberAbove100IsNotSupported() {
+        assertThrows(IllegalArgumentException.class, () -> primeChecker.isPrime(101));
     }
 }
