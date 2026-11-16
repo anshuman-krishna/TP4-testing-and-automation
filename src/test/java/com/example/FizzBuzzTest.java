@@ -10,32 +10,31 @@ public class FizzBuzzTest {
     
     @Test
     public void test1Returns1() {
-        assertEquals("1", FizzBuzz.fizzBuzz(1));
+        assertEquals("1", FizzBuzz.convert(1));
     }
 
     @Test
     public void test2Returns2() {
-        assertEquals("2", FizzBuzz.fizzBuzz(2));
+        assertEquals("2", FizzBuzz.convert(2));
     }
 
     @Test
     public void test3ReturnsFizz() {
-        assertEquals("Fizz", FizzBuzz.fizzBuzz(3));
+        assertEquals("Fizz", FizzBuzz.convert(3));
     }
 
     @Test
     public void test5ReturnsBuzz() {
-        assertEquals("Buzz", FizzBuzz.fizzBuzz(5));
+        assertEquals("Buzz", FizzBuzz.convert(5));
     }
 
     @Test
     public void test15ReturnsFizzBuzz() {
-        assertEquals("FizzBuzz", FizzBuzz.fizzBuzz(15));
+        assertEquals("FizzBuzz", FizzBuzz.convert(15));
     }
 
     @Test
     public void test30ReturnsFizzBuzz() {
-        assertEquals("FizzBuzz", FizzBuzz.fizzBuzz(30));
-
+        assertEquals("FizzBuzz", FizzBuzz.convert(30));
     }
 }
